@@ -38,7 +38,6 @@ public class CardTest {
         assertEquals(player1.getScore(), 4);
     }
 
-    /*
     @Test
     void play_game() {
         Player player1 = new Player(new String[] {"Q", "5"});
@@ -46,5 +45,5 @@ public class CardTest {
         GameCard game = new GameCard();
 
         assertEquals(game.play(player1, player2), "Player 2 win: 2 - 0");
-    } */
+    }
 }
