@@ -56,4 +56,15 @@ public class CardTest {
             Card wrongCard = new Card("A");
         });
     }
+
+    @Test
+    void players_have_2_cards() {
+        Player player1 = new Player(new String[] {"1", "7"});
+        Player player2 = new Player(new String[] {"10"});
+        GameCard game = new GameCard();
+
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            game.play(player1, player2);
+        });
+    }
 }
