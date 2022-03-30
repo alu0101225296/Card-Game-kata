@@ -2,7 +2,7 @@ package CardGame;
 
 public class Player {
     private Card[] playerCards = new Card[2];
-    private Number score;
+    private int score;
 
     Player(String[] cards) {
         for(int i = 0; i < cards.length; i++)
@@ -10,11 +10,15 @@ public class Player {
         score = 0;
     }
 
-    Number getScore() {
+    int getScore() {
         return score;
     }
 
-    void increase_score(Integer addition) {
-        score = addition.intValue() + score.intValue();
+    void increase_score(int addition) {
+        score += addition;
+    }
+
+    Card[] getCards() {
+        return playerCards;
     }
 }
