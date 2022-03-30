@@ -2,8 +2,7 @@ package CardGame;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CardTest {
     @Test
@@ -31,11 +30,21 @@ public class CardTest {
     }
 
     @Test
+    void add_points_to_player() {
+        Player player1 = new Player(new String[] {"Q", "5"});
+
+        player1.inc_Score();
+
+        assertEquals(player.Score(), 1);
+    }
+
+    /*
+    @Test
     void play_game() {
         Player player1 = new Player(new String[] {"Q", "5"});
         Player player2 = new Player(new String[] {"A", "7"});
         GameCard game = new GameCard();
 
         assertEquals(game.play(player1, player2), "Player 2 win: 2 - 0");
-    }
+    } */
 }
