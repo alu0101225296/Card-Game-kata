@@ -8,6 +8,9 @@ public class GameCard {
         Card[] player1Cards = player1.getCards();
         Card[] player2Cards = player2.getCards();
 
+        if(player1Cards.length != numberOfCards || player2Cards.length != numberOfCards)
+            throw new ArithmeticException("Error: Players must have 2 cards");
+
         for(int i = 0; i < player1Cards.length; i++) {
             if(player1Cards[i].higher(player2Cards[i]))
                 player1.increase_score(1);
