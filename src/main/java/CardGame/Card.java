@@ -13,4 +13,8 @@ public class Card {
             return; // check throw exception
         cardValue = value;
     }
+
+    boolean higher(Card other) {
+        return cards.indexOf(this.cardValue) > cards.indexOf(other.cardValue);
+    }
 }

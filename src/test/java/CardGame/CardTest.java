@@ -9,6 +9,7 @@ public class CardTest {
     @Test
     void create_valid_card() {
        Card card = new Card("2");
+
        assertNotNull(card);
     }
 
@@ -20,5 +21,10 @@ public class CardTest {
 
         assertEquals(card1.higher(card2), false);
         assertEquals(card3.higher(card2), true);
+    }
+
+    @Test
+    void can_create_new_player() {
+
     }
 }
