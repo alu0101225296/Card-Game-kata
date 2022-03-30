@@ -33,9 +33,9 @@ public class CardTest {
     void add_points_to_player() {
         Player player1 = new Player(new String[] {"Q", "5"});
 
-        player1.inc_Score();
+        player1.increase_score(4);
 
-        assertEquals(player.Score(), 1);
+        assertEquals(player1.getScore(), 4);
     }
 
     /*
