@@ -26,6 +26,13 @@ public class CardTest {
     @Test
     void can_create_new_player() {
         Player player1 = new Player(new String[] {"Q", "5"});
+
+        assertNotNull(player1);
+    }
+
+    @Test
+    void play_game() {
+        Player player1 = new Player(new String[] {"Q", "5"});
         Player player2 = new Player(new String[] {"A", "7"});
 
         assertEquals(play(player1, player2), "Player 2 win: 2 - 0");
