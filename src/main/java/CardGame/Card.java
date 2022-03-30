@@ -9,7 +9,7 @@ public class Card {
 
     Card(String value) {
         if(!cards.contains(value))
-            return; // check throw exception
+            throw new ArithmeticException("Error: Card doesn't exist");
         cardValue = value;
     }
 

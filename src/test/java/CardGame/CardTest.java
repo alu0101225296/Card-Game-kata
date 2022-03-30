@@ -52,7 +52,7 @@ public class CardTest {
 
     @Test
     void card_must_exist() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+        Assertions.assertThrows(ArithmeticException.class, () -> {
             Card wrongCard = new Card("A");
         });
     }
