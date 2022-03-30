@@ -41,11 +41,16 @@ public class CardTest {
     @Test
     void play_game() {
         Player player1 = new Player(new String[] {"3", "5"});
-        Player player2 = new Player(new String[] {"A", "7"});
+        Player player2 = new Player(new String[] {"1", "7"});
         Player player3 = new Player(new String[] {"10", "2"});
         GameCard game = new GameCard();
 
         assertEquals(game.play(player1, player2), "Player 2 won: 0 - 2");
         assertEquals(game.play(player1, player3), "Draw: 1 - 1");
     }
+    /*
+    @Test
+    void card_number_must_be_correct() {
+
+    }*/
 }

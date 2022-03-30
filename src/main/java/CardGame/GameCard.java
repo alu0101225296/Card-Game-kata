@@ -1,6 +1,7 @@
 package CardGame;
 
 public class GameCard {
+    int numberOfCards = 2;
     GameCard(){};
 
     String play(Player player1, Player player2) {
