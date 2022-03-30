@@ -1,5 +1,6 @@
 package CardGame;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -48,9 +49,11 @@ public class CardTest {
         assertEquals(game.play(player1, player2), "Player 2 won: 0 - 2");
         assertEquals(game.play(player1, player3), "Draw: 1 - 1");
     }
-    /*
-    @Test
-    void card_number_must_be_correct() {
 
-    }*/
+    @Test
+    void card_must_exist() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            Card wrongCard = new Card("A");
+        });
+    }
 }
